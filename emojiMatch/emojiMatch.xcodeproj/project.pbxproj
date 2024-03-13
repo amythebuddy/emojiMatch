@@ -13,6 +13,8 @@
 		33B587002BA0AFFE00CF0BDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33B586FF2BA0AFFE00CF0BDE /* Preview Assets.xcassets */; };
 		33B587072BA0B0C200CF0BDE /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B587062BA0B0C200CF0BDE /* game.swift */; };
 		33B587092BA0B26B00CF0BDE /* emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B587082BA0B26B00CF0BDE /* emoji.png */; };
+		33C1A91B2BA214C400321762 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C1A91A2BA214C400321762 /* Merriweather-Regular.ttf */; };
+		33C1A91D2BA2151500321762 /* MadimiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C1A91C2BA2151500321762 /* MadimiOne-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,9 @@
 		33B586FF2BA0AFFE00CF0BDE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		33B587062BA0B0C200CF0BDE /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 		33B587082BA0B26B00CF0BDE /* emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emoji.png; path = ../../../../../Downloads/emoji.png; sourceTree = "<group>"; };
+		33C1A9192BA20A7A00321762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		33C1A91A2BA214C400321762 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.ttf"; sourceTree = "<group>"; };
+		33C1A91C2BA2151500321762 /* MadimiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MadimiOne-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +60,11 @@
 		33B586F72BA0AFFC00CF0BDE /* emojiMatch */ = {
 			isa = PBXGroup;
 			children = (
+				33C1A9192BA20A7A00321762 /* Info.plist */,
 				33B586F82BA0AFFC00CF0BDE /* emojiMatchApp.swift */,
 				33B586FA2BA0AFFC00CF0BDE /* ContentView.swift */,
+				33C1A91C2BA2151500321762 /* MadimiOne-Regular.ttf */,
+				33C1A91A2BA214C400321762 /* Merriweather-Regular.ttf */,
 				33B587062BA0B0C200CF0BDE /* game.swift */,
 				33B587082BA0B26B00CF0BDE /* emoji.png */,
 				33B586FC2BA0AFFE00CF0BDE /* Assets.xcassets */,
@@ -131,8 +139,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C1A91D2BA2151500321762 /* MadimiOne-Regular.ttf in Resources */,
 				33B587002BA0AFFE00CF0BDE /* Preview Assets.xcassets in Resources */,
 				33B586FD2BA0AFFE00CF0BDE /* Assets.xcassets in Resources */,
+				33C1A91B2BA214C400321762 /* Merriweather-Regular.ttf in Resources */,
 				33B587092BA0B26B00CF0BDE /* emoji.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +292,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"emojiMatch/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = emojiMatch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -310,6 +321,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"emojiMatch/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = emojiMatch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

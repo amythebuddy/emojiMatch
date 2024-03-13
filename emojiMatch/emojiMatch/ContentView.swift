@@ -12,11 +12,23 @@ struct ContentView: View {
         NavigationView{
             ZStack {
                 Image("emoji")
-                VStack {
-                    Text("Emoji Match")
-                        .foregroundColor(.blue)
-                    NavigationLink(destination: game(), label: { Text("Start Game") })
-                        .foregroundColor(.white)
+                VStack(spacing: 300) { // to create space between EmojiMatch and Start
+                    VStack {
+                        Text("EmojiMatch")
+                            .foregroundColor(.white)
+                            .padding(23)
+                            .font(Font.custom("MadimiOne-Regular", size: 50))
+                    }
+                    .background(Color.orange)
+                    .cornerRadius(10)
+                    VStack{
+                        NavigationLink(destination: game(), label: { Text("Start") })
+                            .foregroundColor(.white)
+                            .padding(20)
+                            .font(Font.custom("MadimiOne-Regular", size: 40))
+                    }
+                    .background(.blue)
+                    .cornerRadius(10)
                 }
             }
         }
