@@ -23,56 +23,57 @@ struct game: View {
 
     @State private var score: Int = 0
     
-    @State private var isTapped = false
-
     @State private var gameFinished: Bool = false
     var body: some View {
         Text("Custom Score: \(score)")
             .navigationBarBackButtonHidden(true)
         LazyVGrid(columns: columns) {
             ForEach(emojis.indices, id: \.self) { index in
-                Button(action: {
-                    tappedCards(index: index)
-                    isTapped = true
-                }, label: {
-                    BlueCardView(emoji: emojis[index], isTapped: isTapped)
+                BlueCardView(emoji: emojis[index], onTap: {
+                    tappedCards(index: index) // Activate tappedCards function
                 })
-                
             }
         }
     }
     func tappedCards(index: Int){
         if pickOne == -1 { // if pickOne is not clicked
             pickOne = index // pickOne got that index
-            print(pickOne)
+            cardsFlipped[index] = true
         } else if pickTwo == -1 {
             pickTwo = index
-        } else {
+            cardsFlipped[index] = true
+        }
+        if pickOne != -1 && pickTwo != -1 {
             if emojis[pickOne] == emojis[pickTwo]{
                 score += 1
                 print(score)
+            } else {
+                cardsFlipped[pickOne] = false
+                cardsFlipped[pickTwo] = false
             }
-            print(emojis[pickOne])
-            print(emojis[pickTwo])
             pickOne = -1
             pickTwo = -1
         }
-        cardsFlipped[index] = true
+        print(cardsFlipped)
     }
 }
 struct BlueCardView : View{
     var emoji = ""
-    var isTapped: Bool
+    var onTap: (() -> Void)? // provide a block of code for BlueCardView in the game struct
+    @State private var isTapped = false
     var body : some View {
         ZStack {
-            if !isTapped{
-                Text("\(emoji)")
-                    .padding()
+            if !isTapped {
                 RoundedRectangle(cornerRadius: 5)
                     .fill(Color.blue)
                     .frame(height: 60)
+                    .onTapGesture {
+                        isTapped.toggle()
+                        onTap?()
+                    }
             } else {
-                Color.clear
+                Text("\(emoji)")
+                    .padding()
             }
         }
     }

@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                Image("emoji")
+                Image("emojiHome")
                 VStack(spacing: 300) { // to create space between EmojiMatch and Start
                     VStack {
                         Text("EmojiMatch")
