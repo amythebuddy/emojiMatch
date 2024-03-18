@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0654EAE72BA65E8400471AF9 /* emojiHome.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 0654EAE62BA65E8400471AF9 /* emojiHome.PNG */; };
 		33B586F92BA0AFFC00CF0BDE /* emojiMatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B586F82BA0AFFC00CF0BDE /* emojiMatchApp.swift */; };
 		33B586FB2BA0AFFC00CF0BDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B586FA2BA0AFFC00CF0BDE /* ContentView.swift */; };
 		33B586FD2BA0AFFE00CF0BDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33B586FC2BA0AFFE00CF0BDE /* Assets.xcassets */; };
@@ -15,10 +14,10 @@
 		33B587072BA0B0C200CF0BDE /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B587062BA0B0C200CF0BDE /* game.swift */; };
 		33C1A91B2BA214C400321762 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C1A91A2BA214C400321762 /* Merriweather-Regular.ttf */; };
 		33C1A91D2BA2151500321762 /* MadimiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C1A91C2BA2151500321762 /* MadimiOne-Regular.ttf */; };
+		33C6ED532BA88B930026A0C4 /* emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C6ED522BA88B930026A0C4 /* emoji.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0654EAE62BA65E8400471AF9 /* emojiHome.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emojiHome.PNG; path = ../../../../Downloads/emojiHome.PNG; sourceTree = "<group>"; };
 		33B586F52BA0AFFC00CF0BDE /* emojiMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emojiMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B586F82BA0AFFC00CF0BDE /* emojiMatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emojiMatchApp.swift; sourceTree = "<group>"; };
 		33B586FA2BA0AFFC00CF0BDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		33C1A9192BA20A7A00321762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		33C1A91A2BA214C400321762 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.ttf"; sourceTree = "<group>"; };
 		33C1A91C2BA2151500321762 /* MadimiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MadimiOne-Regular.ttf"; sourceTree = "<group>"; };
+		33C6ED522BA88B930026A0C4 /* emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 				33C1A91C2BA2151500321762 /* MadimiOne-Regular.ttf */,
 				33C1A91A2BA214C400321762 /* Merriweather-Regular.ttf */,
 				33B587062BA0B0C200CF0BDE /* game.swift */,
-				0654EAE62BA65E8400471AF9 /* emojiHome.PNG */,
+				33C6ED522BA88B930026A0C4 /* emoji.png */,
 				33B586FC2BA0AFFE00CF0BDE /* Assets.xcassets */,
 				33B586FE2BA0AFFE00CF0BDE /* Preview Content */,
 			);
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C1A91D2BA2151500321762 /* MadimiOne-Regular.ttf in Resources */,
-				0654EAE72BA65E8400471AF9 /* emojiHome.PNG in Resources */,
+				33C6ED532BA88B930026A0C4 /* emoji.png in Resources */,
 				33B587002BA0AFFE00CF0BDE /* Preview Assets.xcassets in Resources */,
 				33B586FD2BA0AFFE00CF0BDE /* Assets.xcassets in Resources */,
 				33C1A91B2BA214C400321762 /* Merriweather-Regular.ttf in Resources */,

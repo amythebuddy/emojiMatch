@@ -9,13 +9,13 @@ import SwiftUI
 
 struct game: View {
     let columns: [GridItem] = [
-        GridItem(.fixed(60), spacing: nil, alignment: nil),
-        GridItem(.fixed(60), spacing: nil, alignment: nil),
-        GridItem(.fixed(60), spacing: nil, alignment: nil)
+        GridItem(.fixed(70), spacing: 30, alignment: nil),
+        GridItem(.fixed(70), spacing: 30, alignment: nil),
+        GridItem(.fixed(70), spacing: 30, alignment: nil)
     ]
     @State var cardsFlipped: [Bool] = Array(repeating: false, count: 12)
 
-    @State var emojis = ["😀", "😀" ,"😁", "😁", "😂", "😂", "🤣", "🤣", "😃", "😃", "😄", "😄"]
+    @State var emojis = ["😀", "😀" ,"😁", "😁", "😂", "😂", "🤣", "🤣", "😃", "😃", "😄", "😄"].shuffled()
 
     @State private var pickOne: Int = -1
 
@@ -26,10 +26,11 @@ struct game: View {
     @State private var gameFinished: Bool = false
     var body: some View {
         Text("Custom Score: \(score)")
+            .font(Font.custom("MadimiOne-Regular", size: 30))
             .navigationBarBackButtonHidden(true)
         LazyVGrid(columns: columns) {
             ForEach(emojis.indices, id: \.self) { index in
-                BlueCardView(emoji: emojis[index], onTap: {
+                BlueCardView(emoji: emojis[index], isTapped: cardsFlipped[index], onTap: {
                     tappedCards(index: index) // Activate tappedCards function
                 })
             }
@@ -39,43 +40,47 @@ struct game: View {
         if pickOne == -1 { // if pickOne is not clicked
             pickOne = index // pickOne got that index
             cardsFlipped[index] = true
-        } else if pickTwo == -1 {
+        } else {
             pickTwo = index
             cardsFlipped[index] = true
         }
-        if pickOne != -1 && pickTwo != -1 {
+        if pickOne != -1 && pickTwo != -1 { //if pickOne and pickTwo are chosen
             if emojis[pickOne] == emojis[pickTwo]{
                 score += 1
-                print(score)
+                pickOne = -1
+                pickTwo = -1
             } else {
-                cardsFlipped[pickOne] = false
-                cardsFlipped[pickTwo] = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.75){
+                    cardsFlipped[pickOne] = false
+                    cardsFlipped[pickTwo] = false
+                    pickOne = -1
+                    pickTwo = -1
+                }
             }
-            pickOne = -1
-            pickTwo = -1
         }
-        print(cardsFlipped)
     }
 }
 struct BlueCardView : View{
     var emoji = ""
+    var isTapped: Bool
     var onTap: (() -> Void)? // provide a block of code for BlueCardView in the game struct
-    @State private var isTapped = false
     var body : some View {
         ZStack {
-            if !isTapped {
-                RoundedRectangle(cornerRadius: 5)
-                    .fill(Color.blue)
-                    .frame(height: 60)
-                    .onTapGesture {
-                        isTapped.toggle()
-                        onTap?()
-                    }
-            } else {
+            RoundedRectangle(cornerRadius: 5)
+                .fill(isTapped ? Color.clear : Color.blue )
+                .frame(height: 70)
+                .padding(.vertical, 5)
+                .onTapGesture {
+                    onTap?()
+                }
+            if isTapped {
                 Text("\(emoji)")
                     .padding()
+                    .font(.system(size: 30))
+                
             }
         }
+
     }
 }
 
