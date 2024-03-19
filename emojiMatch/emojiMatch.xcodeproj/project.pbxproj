@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0677971C2BA945D6006CD332 /* endGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677971B2BA945D6006CD332 /* endGame.swift */; };
 		33B586F92BA0AFFC00CF0BDE /* emojiMatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B586F82BA0AFFC00CF0BDE /* emojiMatchApp.swift */; };
 		33B586FB2BA0AFFC00CF0BDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B586FA2BA0AFFC00CF0BDE /* ContentView.swift */; };
 		33B586FD2BA0AFFE00CF0BDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33B586FC2BA0AFFE00CF0BDE /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0677971B2BA945D6006CD332 /* endGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endGame.swift; sourceTree = "<group>"; };
 		33B586F52BA0AFFC00CF0BDE /* emojiMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emojiMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B586F82BA0AFFC00CF0BDE /* emojiMatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emojiMatchApp.swift; sourceTree = "<group>"; };
 		33B586FA2BA0AFFC00CF0BDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				33C1A91C2BA2151500321762 /* MadimiOne-Regular.ttf */,
 				33C1A91A2BA214C400321762 /* Merriweather-Regular.ttf */,
 				33B587062BA0B0C200CF0BDE /* game.swift */,
+				0677971B2BA945D6006CD332 /* endGame.swift */,
 				33C6ED522BA88B930026A0C4 /* emoji.png */,
 				33B586FC2BA0AFFE00CF0BDE /* Assets.xcassets */,
 				33B586FE2BA0AFFE00CF0BDE /* Preview Content */,
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33B587072BA0B0C200CF0BDE /* game.swift in Sources */,
+				0677971C2BA945D6006CD332 /* endGame.swift in Sources */,
 				33B586FB2BA0AFFC00CF0BDE /* ContentView.swift in Sources */,
 				33B586F92BA0AFFC00CF0BDE /* emojiMatchApp.swift in Sources */,
 			);

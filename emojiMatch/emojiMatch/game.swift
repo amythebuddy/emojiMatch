@@ -25,15 +25,28 @@ struct game: View {
     
     @State private var gameFinished: Bool = false
     var body: some View {
-        Text("Custom Score: \(score)")
-            .font(Font.custom("MadimiOne-Regular", size: 30))
-            .navigationBarBackButtonHidden(true)
-        LazyVGrid(columns: columns) {
-            ForEach(emojis.indices, id: \.self) { index in
-                BlueCardView(emoji: emojis[index], isTapped: cardsFlipped[index], onTap: {
-                    tappedCards(index: index) // Activate tappedCards function
-                })
+        NavigationView {
+            VStack {
+                Text("Custom Score: \(score)")
+                    .font(Font.custom("MadimiOne-Regular", size: 30))
+                    .navigationBarBackButtonHidden(true)
+                LazyVGrid(columns: columns) {
+                    ForEach(emojis.indices, id: \.self) { index in
+                        BlueCardView(emoji: emojis[index], isTapped: cardsFlipped[index], onTap: {
+                            tappedCards(index: index) // Activate tappedCards function
+                        })
+                    }
+                }
             }
+
+                if score == 6 {
+                    NavigationLink(destination: endGame(), label: { Text("Next") })
+                        .foregroundColor(.white)
+                        .padding(20)
+                        .font(Font.custom("MadimiOne-Regular", size: 40))
+                    
+                }
+
         }
     }
     func tappedCards(index: Int){
@@ -57,6 +70,9 @@ struct game: View {
                     pickTwo = -1
                 }
             }
+        }
+        if score == 6 {
+            gameFinished = true
         }
     }
 }
