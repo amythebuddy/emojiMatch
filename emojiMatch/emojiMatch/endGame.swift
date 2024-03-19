@@ -9,7 +9,27 @@ import SwiftUI
 
 struct endGame: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ZStack {
+                Image("background") // create a background
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
+                    Text("Great Job!")
+                        .font(.system(size: 50))
+                        .padding()
+                        .foregroundColor(.white)
+                    NavigationLink(destination: game(), label: { Text("Play Again") })
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 40)
+                        .font(Font.custom("MadimiOne-Regular", size: 50))
+                        .background(.blue)
+                        .cornerRadius(10)
+                }
+            }
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

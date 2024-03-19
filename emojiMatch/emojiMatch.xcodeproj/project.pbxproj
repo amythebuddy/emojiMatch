@@ -15,6 +15,7 @@
 		33B587072BA0B0C200CF0BDE /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B587062BA0B0C200CF0BDE /* game.swift */; };
 		33C1A91B2BA214C400321762 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C1A91A2BA214C400321762 /* Merriweather-Regular.ttf */; };
 		33C1A91D2BA2151500321762 /* MadimiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C1A91C2BA2151500321762 /* MadimiOne-Regular.ttf */; };
+		33C3A97D2BA9EFA4002BCE36 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 33C3A97C2BA9EFA4002BCE36 /* background.jpeg */; };
 		33C6ED532BA88B930026A0C4 /* emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C6ED522BA88B930026A0C4 /* emoji.png */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		33C1A9192BA20A7A00321762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		33C1A91A2BA214C400321762 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.ttf"; sourceTree = "<group>"; };
 		33C1A91C2BA2151500321762 /* MadimiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MadimiOne-Regular.ttf"; sourceTree = "<group>"; };
+		33C3A97C2BA9EFA4002BCE36 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpeg; path = ../../../../../Downloads/background.jpeg; sourceTree = "<group>"; };
 		33C6ED522BA88B930026A0C4 /* emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				33C1A91A2BA214C400321762 /* Merriweather-Regular.ttf */,
 				33B587062BA0B0C200CF0BDE /* game.swift */,
 				0677971B2BA945D6006CD332 /* endGame.swift */,
+				33C3A97C2BA9EFA4002BCE36 /* background.jpeg */,
 				33C6ED522BA88B930026A0C4 /* emoji.png */,
 				33B586FC2BA0AFFE00CF0BDE /* Assets.xcassets */,
 				33B586FE2BA0AFFE00CF0BDE /* Preview Content */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C1A91D2BA2151500321762 /* MadimiOne-Regular.ttf in Resources */,
+				33C3A97D2BA9EFA4002BCE36 /* background.jpeg in Resources */,
 				33C6ED532BA88B930026A0C4 /* emoji.png in Resources */,
 				33B587002BA0AFFE00CF0BDE /* Preview Assets.xcassets in Resources */,
 				33B586FD2BA0AFFE00CF0BDE /* Assets.xcassets in Resources */,
